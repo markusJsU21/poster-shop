@@ -2,6 +2,9 @@
   <div class="div">
        <img :src="require('../assets/char-'+poster.id+'.png')" alt="poster image" width="300px">
       <p>{{poster.motif}}</p>
+      <p>Price: {{poster.price}} kr</p>
+      
+      
   </div>
 </template>
 
