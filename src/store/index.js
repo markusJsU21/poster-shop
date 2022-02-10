@@ -13,7 +13,6 @@ export default new Vuex.Store({
     addToBasket(state, poster){
       if(!state.basket.includes(poster)){
         state.basket.push(poster)
-        
       }
       else{
         state.basket[state.basket.indexOf(poster)].amount ++

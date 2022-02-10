@@ -1,6 +1,6 @@
 <template>
   <div class="div">
-       <img :src="require('../assets/char-'+poster.id+'.png')" alt="poster image" width="300px">
+       <img :src="require('../assets/char-'+poster.id+'.png')" alt="poster image" height="300px">
       <p>{{poster.motif}}</p>
       <p>Price: {{poster.price}} kr</p>
       <button @click="addToBasket(poster)">Add to basket</button>
