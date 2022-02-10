@@ -31,43 +31,43 @@
     },
     {
         "id": "6",
-        "motif": "clown",
+        "motif": "police",
         "price": "500",
         "amount": "20"
     },
     {
         "id": "7",
-        "motif": "clown",
+        "motif": "photographer",
         "price": "500",
         "amount": "20"
     },
     {
         "id": "8",
-        "motif": "clown",
+        "motif": "fairy",
         "price": "500",
         "amount": "20"
     },
     {
         "id": "9",
-        "motif": "clown",
+        "motif": "coach",
         "price": "500",
         "amount": "20"
     },
     {
         "id": "10",
-        "motif": "clown",
+        "motif": "chef",
         "price": "500",
         "amount": "20"
     },
     {
         "id": "11",
-        "motif": "clown",
+        "motif": "doctor",
         "price": "500",
         "amount": "20"
     },
     {
         "id": "12",
-        "motif": "clown",
+        "motif": "musician",
         "price": "500",
         "amount": "20"
     }

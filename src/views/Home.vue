@@ -3,7 +3,7 @@
     
     <h1>Welcome to Your Vue.js App</h1>
 
-    <router-link v-for="poster of posters" :key="poster.id"></router-link>
+    <router-link :to="'/SingleItem/' + poster.id" v-for="poster of posters" :key="poster.id"><ItemCard :poster="poster"/></router-link>
   </div>
 </template>
 
