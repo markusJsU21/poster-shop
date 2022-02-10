@@ -9,6 +9,7 @@
      {{poster.amount}}
     <button @click="increaseAmount(poster)">+</button>
         </li>
+        <p> <strong>Total:</strong> {{total}}</p>
   </main>
 </template>
 
@@ -18,6 +19,13 @@ export default {
     computed:{
         basket(){
             return this.$store.state.basket
+        },
+        total(){
+            let totalamount = 0
+            for(let item of this.$store.state.basket){
+                totalamount += (item.price * item.amount)
+            }
+            return totalamount
         }
     },
 
