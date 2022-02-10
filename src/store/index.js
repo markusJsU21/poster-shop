@@ -6,11 +6,23 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    posters: [...Posters]
+    posters: [...Posters],
+    basket: [],
   },
   mutations: {
+    addToBasket(state, poster){
+      if(!state.basket.includes(poster)){
+        state.basket.push(poster)
+        console.log(state.basket)
+      }
+     
+      
+    }
   },
   actions: {
+    addToBasket(context, poster){
+      context.commit('addToBasket', poster)
+    }
   },
   modules: {
   }

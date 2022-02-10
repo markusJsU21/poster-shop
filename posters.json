@@ -3,72 +3,72 @@
         "id": "1",
         "motif": "astronaut",
         "price": "500",
-        "amount": "20"
+        "amount": "0"
     },
     {
         "id": "2",
         "motif": "ninja",
         "price": "500",
-        "amount": "20"
+        "amount": "0"
     },
     {
         "id": "3",
         "motif": "developer",
         "price": "500",
-        "amount": "20"
+        "amount": "0"
     },
     {
         "id": "4",
         "motif": "scuba-diver",
         "price": "500",
-        "amount": "20"
+        "amount": "0"
     },
     {
         "id": "5",
         "motif": "clown",
         "price": "500",
-        "amount": "20"
+        "amount": "0"
     },
     {
         "id": "6",
         "motif": "police",
         "price": "500",
-        "amount": "20"
+        "amount": "0"
     },
     {
         "id": "7",
         "motif": "photographer",
         "price": "500",
-        "amount": "20"
+        "amount": "0"
     },
     {
         "id": "8",
         "motif": "fairy",
         "price": "500",
-        "amount": "20"
+        "amount": "0"
     },
     {
         "id": "9",
         "motif": "coach",
         "price": "500",
-        "amount": "20"
+        "amount": "0"
     },
     {
         "id": "10",
         "motif": "chef",
         "price": "500",
-        "amount": "20"
+        "amount": "0"
     },
     {
         "id": "11",
         "motif": "doctor",
         "price": "500",
-        "amount": "20"
+        "amount": "0"
     },
     {
         "id": "12",
         "motif": "musician",
         "price": "500",
-        "amount": "20"
+        "amount": "0"
     }
 ]
