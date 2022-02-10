@@ -16,15 +16,25 @@ export default new Vuex.Store({
       }
       else{
         state.basket[state.basket.indexOf(poster)].amount ++
-        console.log(state.basket)
+        // console.log(typeof(state.basket[state.basket.indexOf(poster)].amount))
       }
-     
-      
+    },
+    decreaseAmount(state, poster){
+      state.basket[state.basket.indexOf(poster)].amount --
+    },
+    increaseAmount(state, poster){
+      state.basket[state.basket.indexOf(poster)].amount ++
     }
   },
   actions: {
     addToBasket(context, poster){
       context.commit('addToBasket', poster)
+    },
+    decreaseAmount(context, poster){
+      context.commit('decreaseAmount', poster)
+    },
+    increaseAmount(context, poster){
+      context.commit('increaseAmount', poster)
     }
   },
   modules: {
