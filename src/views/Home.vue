@@ -2,6 +2,7 @@
   <div class="home">
     
     <h1>Welcome to the poster shop!</h1>
+    <br>
     <div class="item-container">
     <router-link :to="'/SingleItem/' + poster.id" v-for="poster of posters" :key="poster.id"><ItemCard :poster="poster"/></router-link>
     </div>
@@ -35,8 +36,31 @@ export default {
 <style lang= 'scss'>
 
 .item-container{
+  /*
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  */
+
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+
+h1{
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+
+button{
+  width: 90px;
+  height: 50%;
+  
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 </style>

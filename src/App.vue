@@ -18,20 +18,26 @@
 *{
   font-family: 'IBM Plex Sans', sans-serif;
   text-decoration: none;
+  margin: 0px;
+  padding: 0px;
   
 }
   #nav{
- 
   margin: auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 50px;
-  background-color:bisque;
+  background-color: #41BBFF;
 
     a{
       color: white;
       font-size: 2rem;
+      font-weight: bold;
+    }
+
+    a:hover{
+      background-color: #FCDC6B;
     }
 }
 a{
