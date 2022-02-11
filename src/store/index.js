@@ -5,9 +5,12 @@ import Posters from '../../posters.json'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  
   state: {
     posters: [...Posters],
     basket: [],
+    currentPage: 0,
+    pageCounter: 3
   },
   mutations: {
     addToBasket(state, poster){
@@ -23,6 +26,14 @@ export default new Vuex.Store({
     },
     increaseAmount(state, poster){
       state.basket[state.basket.indexOf(poster)].amount ++
+    },
+    forward(state){
+      state.currentPage += 3
+      state.pageCounter +=3
+    },
+    back(state){
+      state.currentPage -= 3
+      state.pageCounter -=3
     }
   },
   actions: {
@@ -34,6 +45,12 @@ export default new Vuex.Store({
     },
     increaseAmount(context, poster){
       context.commit('increaseAmount', poster)
+    },
+    forward(context){
+      context.commit('forward')
+    },
+    back(context){
+      context.commit('back')
     }
   },
   getters:{
@@ -46,8 +63,10 @@ export default new Vuex.Store({
   },
   basket(state){
     return state.basket
+  },
+  threeCardView(state){
+    return state.posters.slice(state.currentPage, state.pageCounter)
   }
-    
   },
   modules: {
   }
