@@ -10,8 +10,10 @@
 <script>
 
 export default {
-  props:['poster']
+  props:['poster'],
 }
 </script>
 
+<style>
 
+</style>
