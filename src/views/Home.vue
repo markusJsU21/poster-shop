@@ -42,8 +42,9 @@ export default {
   */
 
   display:flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  
   
 }
 
@@ -57,10 +58,7 @@ button{
   width: 90px;
   height: 50%;
   
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+  
 }
 
 </style>
