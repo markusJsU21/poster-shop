@@ -10,7 +10,7 @@ export default new Vuex.Store({
     posters: [...Posters],
     basket: [],
     currentPage: 0,
-    pageCounter: 3
+    pageCounter: 6
   },
   mutations: {
     addToBasket(state, poster){
@@ -28,12 +28,12 @@ export default new Vuex.Store({
       state.basket[state.basket.indexOf(poster)].amount ++
     },
     forward(state){
-      state.currentPage += 3
-      state.pageCounter +=3
+      state.currentPage += 6
+      state.pageCounter +=6
     },
     back(state){
-      state.currentPage -= 3
-      state.pageCounter -=3
+      state.currentPage -= 6
+      state.pageCounter -=6
     }
   },
   actions: {

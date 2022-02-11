@@ -2,11 +2,18 @@
   <div class="home">
     
     <h1>Welcome to the poster shop!</h1>
+   
     <div class="item-container">
-    <router-link :to="'/SingleItem/' + poster.id" v-for="poster of posters" :key="poster.id"><ItemCard :poster="poster"/></router-link>
+     
+    <router-link :to="'/SingleItem/' + poster.id" v-for="poster of posters" :key="poster.id"><ItemCard :poster="poster"/> </router-link>
+
     </div>
+     
+    
+    
+   
     <button @click="back" v-if="this.$store.state.currentPage > 0">back</button>
-    <button @click="forward" v-if="this.$store.state.currentPage < this.$store.state.posters.length -3">forward</button>
+    <button @click="forward" v-if="this.$store.state.currentPage < this.$store.state.posters.length -6">forward</button>
   </div>
 </template>
 
@@ -25,9 +32,6 @@ export default {
   },
   computed: {
     ...mapGetters({posters: 'threeCardView'}),
-    // posters(){
-    //   return this.$store.state.posters
-    // }
   }
 }
 </script>
@@ -37,6 +41,26 @@ export default {
 .item-container{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
+
+/* .slide-enter-active{
+  animation: all bounce-in .5s
+}
+.slide-leave-active{
+  animation: bounce-in .5s reverse
+}
+@keyframes bounce-in{
+  0% {
+    transform: scale(0);
+  }
+  50%{
+    transform: scale(1.5)
+  }
+  100%{
+    transform: scale(1)
+  }
+} */
+
 
 </style>
