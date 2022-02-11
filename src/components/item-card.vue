@@ -13,6 +13,16 @@ export default {
 }
 </script>
 
-<style>
-/**/
+<style lang= 'scss'>
+img{
+  width: 200px;
+  height: 250px;
+}
+
+p{
+  color:red;
+  font-size: 20px;
+  text-align: center;
+  
+}
 </style>

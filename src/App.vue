@@ -17,13 +17,11 @@
 //font-family: 'IBM Plex Sans', sans-serif;
 *{
   font-family: 'IBM Plex Sans', sans-serif;
-  text-decoration: none;
   margin: 0px;
   padding: 0px;
-  
 }
+
   #nav{
-  margin: auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -39,8 +37,9 @@
     a:hover{
       background-color: #FCDC6B;
     }
-}
-a{
+    a{
   text-decoration: none;
 }
+}
+
 </style>
