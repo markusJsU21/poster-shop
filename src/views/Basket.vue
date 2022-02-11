@@ -14,21 +14,12 @@
 </template>
 
 <script>
+import {mapGetters} from "vuex";
 export default {
     
     computed:{
-        basket(){
-            return this.$store.state.basket
-        },
-        total(){
-            let totalamount = 0
-            for(let item of this.$store.state.basket){
-                totalamount += (item.price * item.amount)
-            }
-            return totalamount
-        }
+        ...mapGetters({total: 'total', basket: 'basket'})
     },
-
     methods:{
         decreaseAmount(poster){
             this.$store.dispatch('decreaseAmount', poster)

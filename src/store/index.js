@@ -16,7 +16,6 @@ export default new Vuex.Store({
       }
       else{
         state.basket[state.basket.indexOf(poster)].amount ++
-        // console.log(typeof(state.basket[state.basket.indexOf(poster)].amount))
       }
     },
     decreaseAmount(state, poster){
@@ -36,6 +35,19 @@ export default new Vuex.Store({
     increaseAmount(context, poster){
       context.commit('increaseAmount', poster)
     }
+  },
+  getters:{
+    total(state){
+      let totalamount = 0
+      for(let item of state.basket){
+          totalamount += (item.price * item.amount)
+      }
+      return totalamount
+  },
+  basket(state){
+    return state.basket
+  }
+    
   },
   modules: {
   }
