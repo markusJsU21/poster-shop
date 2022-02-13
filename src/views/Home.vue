@@ -1,14 +1,15 @@
 <template>
   <div class="home">
     
-    <h1>Welcome to the poster shop!</h1>
+    <Transition name="slide">
+    <h1 v-if="slide">Welcome to the poster shop!</h1>
+    </Transition>
     <br>
-
-    <div class="item-container">
-     
-    <router-link :to="'/SingleItem/' + poster.id" v-for="poster of posters" :key="poster.id"><ItemCard :poster="poster"/> </router-link>
-
+    
+    <div class="item-container"> 
+    <router-link :to="'/SingleItem/' + poster.id" v-for="poster of posters" :key="poster.id"><ItemCard :poster="poster"/> </router-link> 
     </div>
+    
      
     
     
@@ -22,6 +23,14 @@
 import ItemCard from '../components/item-card.vue'
 import {mapGetters} from 'vuex'
 export default {
+  data(){return{
+    slide: false
+  }},
+  mounted(){
+    
+      this.slide = true
+    
+  },
   components: {ItemCard},
   methods:{
     forward(){
@@ -64,18 +73,24 @@ button{
   justify-content: center;
 
 }
-.slide-leave-active{
-  animation: bounce-in .5s reverse
+.slide-enter-active{
+   animation: slide-in 1s ease
 }
-@keyframes bounce-in{
+.slide-leave-active{
+  animation: slide-in 1s reverse
+}
+@keyframes slide-in{
   0% {
-    transform: scale(0);
+    transform: translateX(400px);
+    opacity: 0;
   }
   50%{
-    transform: scale(1.5)
+    transform: translateX(-40px);
+    opacity: 50%;
   }
   100%{
-    transform: scale(1)
+    transform: translateX(0px);
+    opacity: 100%;
   }
 }
 
