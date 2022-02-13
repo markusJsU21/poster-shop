@@ -1,10 +1,28 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/Basket/">Basket</router-link>
+      <transition
+      mode="out-in"
+      enter-active-class="animate__animated animate__fadeInUp"
+       leave-active-class="animate__animated animate__fadeOut"
+      >
+      <router-link key="home" to="/">Home</router-link>
+      </transition>
+      <transition
+      mode="out-in"
+      enter-active-class="animate__animated animate__fadeInUp"
+       leave-active-class="animate__animated animate__fadeOut"
+      >
+      <router-link key="basket" to="/Basket/">Basket</router-link>
+      </transition>
     </div>
+    <transition
+    mode="out-in"
+    enter-active-class="animate__animated animate__fadeIn"
+    leave-active-class="animate__animated animate__fadeOut"
+    >
     <router-view/>
+    </transition>
   </div>
 </template>
 
@@ -42,5 +60,10 @@
 }
 a{
   text-decoration: none;
+}
+
+.animate__animated.animate__fadeIn,
+.animate__animated.animate__fadeOut{
+  --animate-duration: .1s;
 }
 </style>
