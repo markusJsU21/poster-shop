@@ -1,13 +1,12 @@
 <template>
   <main class="item-card">
       <img :src="require('../assets/char-'+poster.id+'.png')" alt="poster image" height="100px">
+      <br>
       <p>{{poster.motif}}</p>
-      
   </main>
 </template>
 
 <script>
-
 export default {
   props:['poster']
 }
@@ -20,9 +19,8 @@ img{
 }
 
 p{
-  color:red;
+  color:black;
   font-size: 20px;
   text-align: center;
-  
 }
 </style>
